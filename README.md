@@ -22,9 +22,11 @@ Mode_Beta = 0 : Mode_Debug = 1 : VBC = 1
 ![XL_VBanywhere Image](ProjekteigArgFBedKomp.png "ProjekteigArgFBedKomp Image")
 
 Zusätzlich kann man mit dem #If-Statement-für-bedingte-Kompilierung diese Konstanten abfragen um dem Compiler zu sagen was er Kompilieren soll und was er beim Kompilieren weglassen soll. z.B.:
-
+  
 <PRE><FONT SIZE=2 FACE=Consolas><FONT COLOR=#0000FF>Sub</FONT> Main()
 <FONT COLOR=#0000FF>End</FONT> <FONT COLOR=#0000FF>Sub</FONT></PRE> 
-
+  
 ### VBA7 x86 und x64  
 Seit ca 2007 gibt es VBA7 auch für die 64-Bit Plattform. Mit VBA7 wurden 2 neue vorbelegte Kompiler-Konstanten und neue Schlüsselwörter eingeführt.  
+
+
