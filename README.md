@@ -1,5 +1,5 @@
 # XL_VBanywhere
-## VB-Code running in VBC as well as in VBA7-x86 and x64  
+## VB-Code running in VBC as well as in VBA7-x86 and -x64  
 
 [![GitHub](https://img.shields.io/github/license/OlimilO1402/XL_VBanywhere?style=plastic)](https://github.com/OlimilO1402/XL_VBanywhere/blob/master/LICENSE) 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/OlimilO1402/XL_VBanywhere?style=plastic)](https://github.com/OlimilO1402/XL_VBanywhere/releases/latest)
@@ -10,8 +10,8 @@ Tutorial published on 04. aug. 2021. at ActiveVB.de/VBA-Forum
 
 Tutorial in german, deutsch
 
-#VB-Code, lauffähig in VBC als auch VBA7-x86 und -x64  
-## VB bedingte Kompilierung  
+## VB-Code lauffähig in VBC als auch VBA7-x86 und -x64  
+### VB bedingte Kompilierung   
 
 In der VBC-IDE gibt es in den Projekteigenschaften unter "Erstellen" "Argumente für bedingte Kompilierung" die Möglichkeit Konstanten zu definieren mit denen das Verhalten des Compilers nach Belieben gesteuert werden kann.
 Ebenso in der VBA-IDE zu finden unter "Extras" "Eigenschaften von VBAProjekt..."
@@ -26,5 +26,5 @@ Zusätzlich kann man mit dem #If-Statement-für-bedingte-Kompilierung diese Kons
 <PRE><FONT SIZE=2 FACE=Consolas><FONT COLOR=#0000FF>Sub</FONT> Main()
 <FONT COLOR=#0000FF>End</FONT> <FONT COLOR=#0000FF>Sub</FONT>
 
-##VBA7 x86 und x64  
+### VBA7 x86 und x64  
 Seit ca 2007 gibt es VBA7 auch für die 64-Bit Plattform. Mit VBA7 wurden 2 neue vorbelegte Kompiler-Konstanten und neue Schlüsselwörter eingeführt.  
