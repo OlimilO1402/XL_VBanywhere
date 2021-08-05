@@ -25,12 +25,12 @@ Zusätzlich kann man mit dem #If-Statement-für-bedingte-Kompilierung diese Kons
   
 <PRE><FONT SIZE=2 FACE=Consolas><FONT COLOR=#0000FF>Sub</FONT> Main()<FONT COLOR=#0000FF>End</FONT> <FONT COLOR=#0000FF>Sub</FONT></FONT></PRE> 
 
-
+<PRE>
 <span style="font-family:Consolas">
 <span style="color:blue">Sub</span> Main()
 <span style="color:blue">End Sub</span>
 </span>
-
+</PRE> 
   
 ### VBA7 x86 und x64  
 Seit ca 2007 gibt es VBA7 auch für die 64-Bit Plattform. Mit VBA7 wurden 2 neue vorbelegte Kompiler-Konstanten und neue Schlüsselwörter eingeführt.  
