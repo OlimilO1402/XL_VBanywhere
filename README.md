@@ -22,7 +22,7 @@ Mode_Beta = 0 : Mode_Debug = 1 : VBC = 1
 ![XL_VBanywhere Image](ProjekteigArgFBedKomp.png "ProjekteigArgFBedKomp Image")
 
 Zusätzlich kann man mit dem #If-Statement-für-bedingte-Kompilierung diese Konstanten abfragen um dem Compiler zu sagen was er Kompilieren soll und was er beim Kompilieren weglassen soll. z.B.:
-<pre><span style="font-family:Consolas" style="font-size:2">
+<pre><span style="font-family:Consolas" style="font-size:1">
 <span style="color:blue">Sub</span> Main()
 <span style="color:blue">End Sub</span>
 </span></pre> 
