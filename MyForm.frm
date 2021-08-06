@@ -45,14 +45,12 @@ Private m_hWnd As LongPtr
 Private m_hDC  As LongPtr
 
 #If VBA6 Or VBA7 Then
-    Private Sub UserForm_Activate()
-        Initialize
-    End Sub
+Private Sub UserForm_Activate()
 #Else
-    Private Sub Form_Activate()
-        Initialize
-    End Sub
+Private Sub Form_Activate()
 #End If
+    Initialize
+End Sub
 
 Sub Initialize()
     m_hWnd = GetActiveWindow
