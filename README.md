@@ -1,7 +1,7 @@
-# XL_VBanywhere
+# XL_VBanywhere  
 ## VB-Code running in VBC as well as in VBA7-x86 and -x64  
 
-[![GitHub](https://img.shields.io/github/license/OlimilO1402/XL_VBanywhere?style=plastic)](https://github.com/OlimilO1402/XL_VBanywhere/blob/master/LICENSE) 
+[![GitHub](https://img.shields.io/github/license/OlimilO1402/XL_VBanywhere?style=plastic)](https://github.com/OlimilO1402/XL_VBanywhere/blob/master/LICENSE)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/OlimilO1402/XL_VBanywhere?style=plastic)](https://github.com/OlimilO1402/XL_VBanywhere/releases/latest)
 [![Github All Releases](https://img.shields.io/github/downloads/OlimilO1402/XL_VBanywhere/total.svg)](https://github.com/OlimilO1402/XL_VBanywhere/releases/download/v1.0.0/XL_VBanywhere.zip)
 [![Follow](https://img.shields.io/github/followers/OlimilO1402.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/OlimilO1402/XL_VBanywhere/watchers)
@@ -14,12 +14,12 @@ Tutorial in german, deutsch
 ### VB bedingte Kompilierung   
 
 In der VBC-IDE gibt es in den Projekteigenschaften unter "Erstellen" "Argumente für bedingte Kompilierung" die Möglichkeit Konstanten zu definieren, mit denen das Verhalten des Compilers nach Belieben gesteuert werden kann.
-Ebenso in der VBA-IDE zu finden unter "Extras" "Eigenschaften von VBAProjekt..."
-Mehrere Konstanten werden mit einem Doppelpunkt ":" voneinander getrennt z.B.:
+Ebenso in der VBA-IDE zu finden unter "Extras" "Eigenschaften von VBAProjekt..."  
+Mehrere Konstanten werden mit einem Doppelpunkt ":" voneinander getrennt z.B.:  
 
-Mode_Beta = 0 : Mode_Debug = 1 : VBC = 1
+Mode_Beta = 0 : Mode_Debug = 1 : VBC = 1  
 
-![XL_VBanywhere Image](ProjekteigArgFBedKomp.png "ProjekteigArgFBedKomp Image")
+![XL_VBanywhere Image](ProjekteigArgFBedKomp.png "ProjekteigArgFBedKomp Image")  
 
 Zusätzlich kann man mit dem #If-Statement-für-bedingte-Kompilierung diese Konstanten abfragen um dem Compiler zu sagen was er Kompilieren soll und was er beim Kompilieren weglassen soll. z.B.:
 
@@ -50,15 +50,15 @@ Seit ca 2007 gibt es VBA7 auch für die 64-Bit Plattform. Mit VBA7 wurden 2 neue
 
 #### Neue Kompiler-Konstanten in VBA7  
 Diese sind wie gesagt bereits vorbelegt, d.h. sie müssen nirgends angelegt werden, sondern die kennt der Kompiler bereits.
-Die Konstanten sind:
-Win64 und VBA7
-Diese Konstanten wurde erforderlich, da es VBA7 bzw Office sowohl in der 32-Bit-x86-Version als auch in der 64-Bit-x64-Version gibt.
-In der Office 64-Bit Version ist
-Win64 = 1 und VBA7 = 1
-In der Office 32-Bit Version mit VBA7 ist
-Win64 = 0 und VBA7 = 1
-In älteren Office 32-Bit Versionen vor 2007 und in VBC ist
-Win64 = 0 und VBA7 = 0
+Die Konstanten sind:  
+Win64 und VBA7  
+Diese Konstanten wurden erforderlich, da es VBA7 bzw Office sowohl in der 32-Bit-x86-Version als auch in der 64-Bit-x64-Version gibt.  
+In der Office 64-Bit Version ist  
+Win64 = 1 und VBA7 = 1  
+In der Office 32-Bit Version mit VBA7 ist  
+Win64 = 0 und VBA7 = 1  
+In älteren Office 32-Bit Versionen vor 2007 und in VBC ist  
+Win64 = 0 und VBA7 = 0  
 
 #### Neue Schlüsselwörter und Datentypen in VBA7  
 Jede API-Funktion braucht im Vergleich zu VBC/VBA6 das zusätzliche Schlüsselwort "**PtrSafe**" das vor Function/Sub eingefügt wird. Da VBC dieses Schlüsselwort nicht kennt kommen wir für unseren Zweck nicht umhin Jede API-Funktion mit Hilfe der bedingten Kompilierung zweimal zu deklarieren.  
@@ -82,7 +82,7 @@ Jede Enum-Konstante ist ein 32-Bit breiter Integer bzw ein VB.Long, für Zeiger 
 Die Einführung des Enum-Typen LongPtr hat den Vorteil dass sich API-Funtkionen zwischen VBC und VBA7-64 nur noch durch das Schlüsselwort PtrSafe unterscheiden, und ansonsten genau gleich lauten.
 Für Strukturen bzw ud-Types die für die Windows-API verwendet werden müssen, hat dies sogar den Vorteil dass sie nicht durch bedingte Kompilierung doppelt angelegt werden müssen, man spart also jede Menge Platz, Zeilen und Schreibarbeit.
 
-Das GitHub-Repo enthält ein kleines VB-Projekt als auch eine Exceldatei Mappe1.xlsm mit identischem Code in Form und Modul. Bitte beachten Sie, in der Excel-datei wird kein Code gestartet, erst durch manuelles Aufrufen des Makros "Main". Es soll gezeigt werden wie VB-Code in VB-Classis als auch in VBA7-x64 lauffähig wird, durch bedingte Kompilierung und durch Einführung des leeren Datentyp Enum LongPtr in VBC.
+Das GitHub-Repo enthält ein kleines VB-Projekt als auch eine Exceldatei Mappe1.xlsm mit identischem Code in Form und Modul. Bitte beachten Sie, in der Excel-datei wird kein Code gestartet, erst durch manuelles Aufrufen des Makros "Main". Es soll gezeigt werden wie VB-Code in VB-Classic als auch in VBA7-x64 lauffähig wird, durch bedingte Kompilierung und durch Einführung des Datentyp Enum LongPtr in VBC.
 
 Form/UserForm: MyForm
 Label: Label1, Label2
@@ -145,8 +145,7 @@ Public Const DT_SINGLELINE As Long = &H20
     Public Declare PtrSafe Function DrawTextW Lib "user32" (ByVal hdc As LongPtr, ByVal lpStr As LongPtr, ByVal nCount As Long, ByRef lpRect As RECT, ByVal wFormat As Long) As Long
     Public Declare PtrSafe Function DrawFocusRect Lib "user32.dll" (ByVal hDC As LongPtr, ByRef lpRect As RECT) As Long
     Public Declare PtrSafe Function MessageBoxW Lib "user32" (ByVal hwnd As LongPtr, ByVal lpText As LongPtr, ByVal lpCaption As LongPtr, ByVal wType As Long) As Long
-#End If
-#If VBC Then
+#Else
     Public Enum LongPtr
         [_]
     End Enum
