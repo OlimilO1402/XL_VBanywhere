@@ -6,8 +6,8 @@
 [![Github All Releases](https://img.shields.io/github/downloads/OlimilO1402/XL_VBanywhere/total.svg)](https://github.com/OlimilO1402/XL_VBanywhere/releases/download/v1.0.0/XL_VBanywhere.zip)
 [![Follow](https://img.shields.io/github/followers/OlimilO1402.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/OlimilO1402/XL_VBanywhere/watchers)
 
-Tutorial published on 04. aug. 2021. at ActiveVB.de/VBA-Forum
-The project shows how to make VB-Code runnable in VB-Classic as well as in VBA7-x64, by using conditional compilation and at the same time how to avoid unecessary lines of code caused by conditional compilation just by inventing the datatype Enum LongPtr in VBC.  
+Tutorial published on 04. aug. 2021. at ActiveVB.de/VBA-Forum.  
+The project shows how to make VB-Code runnable in VB-Classic as well as in 64-bit VBA7, by using conditional compilation and at the same time how to avoid unecessary lines of code caused by conditional compilation just by inventing the datatype Enum LongPtr in VBC.  
 
 Tutorial in english  
 
