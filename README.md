@@ -95,6 +95,9 @@ By inventing the Enum-type LongPtr we get the advantage to define every API-func
 Now we finally can get rid of so many conditional-compilation-lines of code like "#If VBA7 Then".  
 For structurs resp ud-types for the windows-API, we get the benefit to avoid conditional compilation completely, and delete unecessary double declared ud-types, saving a lot of lines of code.  
 
+### Further Reading ###  
+[Kompatibilität zwischen der 32-Bit- und der 64-Bit-Version von Office](http://foren.activevb.de/derefer?https%3A%2F%2Fdocs.microsoft.com%2Fde-de%2Foffice%2Fclient-developer%2Fshared%2Fcompatibility-between-the-32-bit-and-64-bit-versions-of-office)  
+
 The GitHub-repo contains a little VBC-project with only a form and a module, and also a little excel-file Mappe1.xlsm with the identical code.  
 Please pay attention to the following: in the excel-file no code will be started unless you call the makro "Main" yourself manually.  
 
