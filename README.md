@@ -160,7 +160,7 @@ Public Const DT_SINGLELINE As Long = &H20
     Public Declare PtrSafe Function GetActiveWindow Lib "user32" () As LongPtr
     Public Declare PtrSafe Function GetDC Lib "user32" (ByVal hWnd As LongPtr) As LongPtr
     Public Declare PtrSafe Function DrawTextW Lib "user32" (ByVal hdc As LongPtr, ByVal lpStr As LongPtr, ByVal nCount As Long, ByRef lpRect As RECT, ByVal wFormat As Long) As Long
-    Public Declare PtrSafe Function DrawFocusRect Lib "user32.dll" (ByVal hDC As LongPtr, ByRef lpRect As RECT) As Long
+    Public Declare PtrSafe Function DrawFocusRect Lib "user32" (ByVal hDC As LongPtr, ByRef lpRect As RECT) As Long
     Public Declare PtrSafe Function MessageBoxW Lib "user32" (ByVal hwnd As LongPtr, ByVal lpText As LongPtr, ByVal lpCaption As LongPtr, ByVal wType As Long) As Long
 #Else
     Public Enum LongPtr
@@ -169,7 +169,7 @@ Public Const DT_SINGLELINE As Long = &H20
     Public Declare Function GetActiveWindow Lib "user32" () As LongPtr
     Public Declare Function GetDC Lib "user32" (ByVal hwnd As LongPtr) As LongPtr
     Public Declare Function DrawTextW Lib "user32" (ByVal hDC As LongPtr, ByVal lpStr As LongPtr, ByVal nCount As Long, ByRef lpRect As RECT, ByVal wFormat As Long) As Long
-    Public Declare Function DrawFocusRect Lib "user32.dll" (ByVal hDC As LongPtr, ByRef lpRect As RECT) As Long
+    Public Declare Function DrawFocusRect Lib "user32" (ByVal hDC As LongPtr, ByRef lpRect As RECT) As Long
     Public Declare Function MessageBoxW Lib "user32" (ByVal hwnd As LongPtr, ByVal lpText As LongPtr, ByVal lpCaption As LongPtr, ByVal wType As Long) As Long
 #End If
 
@@ -227,7 +227,6 @@ Function GetGreekAlphabet() As String
 End Function
 
 Public Function MsgBoxW(Prompt, Optional ByVal Buttons As VbMsgBoxStyle = vbOKOnly, Optional ByVal Title) As VbMsgBoxResult
-'Public Function MsgBoxW(Prompt, Optional ByVal Buttons As VbMsgBoxStyle = vbOKOnly, Optional ByVal Title, Optional Helpfile, Optional Context) As VbMsgBoxResult
     Title = IIf(IsMissing(Title), App_EXEName, CStr(Title))
     MsgBoxW = MessageBoxW(0, StrPtr(Prompt), StrPtr(Title), Buttons)
 End Function
