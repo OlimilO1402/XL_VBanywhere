@@ -63,12 +63,12 @@ Win64 = 1 and VBA7 = 1
 In the Office 32-Bit version with VBA7 we have:  
 Win64 = 0 and VBA7 = 1  
 
-In all other older Office 32-Bit Versions before 2007 and in VBC, there is of course none of this and therefor the default for a non defined compiler constant is 0
+In all other older Office 32-Bit Versions before 2007 and in VBC, there is of course none of this and therefor the default for a non defined compiler constant is 0  
 Win64 = 0 and VBA7 = 0  
 
 #### New Keywords and Datatypes in VBA7  
 In VBA7 every API-function needs the new keyword "**PtrSafe**" inserted before Function/Sub. Because VBC does not know this keyword, we are forced to declare every API-Function twice for this purpose.  
-At least we are able to do this, just by using VBA7-constant copying the declares and insert the PtrSafe-keyword nothing more to do here.  
+At least we are able to do this, just by using the constant "VBA7" copying the declares and insert the PtrSafe-keyword, nothing more to do here.  
 
 In x86/Win32 every pointer has a width of 32 bits. In VBC there is no special datatype for pointers, therefore in the past the VB-community used the datatype Long for pointers, 
 also because it is returned from the functions StrPtr, ObjPtr and VarPtr in VBC/VBA6.
@@ -77,7 +77,7 @@ Because in x64 every pointer has a width of 64 bits microsoft invented the new d
 
 LongPtr has a very special ability: in X86 it has a width of 32 bit and in x64 it has a width of 64 bit  
 
-*Bear in mind:*
+*Bear in mind:*  
 The datatype LongPtr must be used with all handles like hWnd or hDC as well as for pointers like e.g. with the Unicode-API-functions (the W-functions) e.g. for using unicode Strings.  
 Furthermore the datytype LongPtr is returned by the functions StrPtr, ObjPtr and VarPtr in VBA7.  
 
@@ -96,9 +96,9 @@ Now we finally can get rid of so many conditional-compilation-lines of code like
 For structurs resp ud-types for the windows-API, we get the benefit to avoid conditional compilation completely, and delete unecessary double declared ud-types, saving a lot of lines of code.  
 
 ### Further Reading ###  
-[Kompatibilität zwischen der 32-Bit- und der 64-Bit-Version von Office](http://foren.activevb.de/derefer?https%3A%2F%2Fdocs.microsoft.com%2Fde-de%2Foffice%2Fclient-developer%2Fshared%2Fcompatibility-between-the-32-bit-and-64-bit-versions-of-office)  
+[docs.microsoft: Kompatibilität zwischen der 32-Bit- und der 64-Bit-Version von Office](https://docs.microsoft.com/de-de/office/client-developer/shared/compatibility-between-the-32-bit-and-64-bit-versions-of-office)  
 
-The GitHub-repo contains a little VBC-project with only a form and a module, and also a little excel-file Mappe1.xlsm with the identical code.  
+The GitHub-repo contains a little VBC-project with only a form and a module, and also a little excel-file Mappe1.xlsm with the identic code.  
 Please pay attention to the following: in the excel-file no code will be started unless you call the makro "Main" yourself manually.  
 
 Form/UserForm: MyForm

@@ -83,7 +83,7 @@ Die Einführung des Enum-Typen LongPtr hat den Vorteil dass sich API-Funtkionen 
 Für Strukturen bzw ud-Types die für die Windows-API verwendet werden müssen, hat dies sogar den Vorteil dass sie nicht durch bedingte Kompilierung doppelt angelegt werden müssen, man spart also jede Menge Platz, Zeilen und Schreibarbeit.
 
 ### Links ###   
-[Kompatibilität zwischen der 32-Bit- und der 64-Bit-Version von Office](http://foren.activevb.de/derefer?https%3A%2F%2Fdocs.microsoft.com%2Fde-de%2Foffice%2Fclient-developer%2Fshared%2Fcompatibility-between-the-32-bit-and-64-bit-versions-of-office)  
+[docs.microsoft: Kompatibilität zwischen der 32-Bit- und der 64-Bit-Version von Office](https://docs.microsoft.com/de-de/office/client-developer/shared/compatibility-between-the-32-bit-and-64-bit-versions-of-office)  
 
 
 Das GitHub-Repo enthält ein kleines VB-Projekt als auch eine Exceldatei Mappe1.xlsm mit identischem Code in Form und Modul. Bitte beachten Sie, in der Excel-datei wird kein Code gestartet, erst durch manuelles Aufrufen des Makros "Main". Es soll gezeigt werden wie VB-Code in VB-Classic als auch in VBA7-x64 lauffähig wird, durch bedingte Kompilierung und durch Einführung des Datentyp Enum LongPtr in VBC.
