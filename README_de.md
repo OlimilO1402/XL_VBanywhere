@@ -7,6 +7,7 @@
 [![Follow](https://img.shields.io/github/followers/OlimilO1402.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/OlimilO1402/XL_VBanywhere/watchers)
 
 Tutorial published on 04. aug. 2021. at ActiveVB.de/VBA-Forum
+Das GitHub-Repo enthält ein kleines VB-Projekt mit einer Form und einem Modul, und eine Exceldatei Mappe1.xlsm mit identischem Code. Bitte beachten Sie, in der Excel-datei wird kein Code gestartet, erst durch manuelles Aufrufen des Makros "Main". Es soll gezeigt werden wie VB-Code in VB-Classic als auch in VBA7-x64 lauffähig wird, durch bedingte Kompilierung und durch Einführung des Datentyp Enum LongPtr in VBC.
 
 Tutorial in german, deutsch
 
@@ -19,7 +20,7 @@ Mehrere Konstanten werden mit einem Doppelpunkt ":" voneinander getrennt z.B.:
 
 Mode_Beta = 0 : Mode_Debug = 1 : VBC = 1  
 
-![XL_VBanywhere Image](ProjekteigArgFBedKomp.png "ProjekteigArgFBedKomp Image")  
+![XL_VBanywhere Image](Resources/ProjekteigArgFBedKomp.png "ProjekteigArgFBedKomp Image")  
 
 Zusätzlich kann man mit dem #If-Statement-für-bedingte-Kompilierung diese Konstanten abfragen um dem Compiler zu sagen was er Kompilieren soll und was er beim Kompilieren weglassen soll. z.B.:
 
@@ -85,8 +86,6 @@ Für Strukturen bzw ud-Types die für die Windows-API verwendet werden müssen, 
 ### Links ###   
 [docs.microsoft: Kompatibilität zwischen der 32-Bit- und der 64-Bit-Version von Office](https://docs.microsoft.com/de-de/office/client-developer/shared/compatibility-between-the-32-bit-and-64-bit-versions-of-office)  
 
-
-Das GitHub-Repo enthält ein kleines VB-Projekt als auch eine Exceldatei Mappe1.xlsm mit identischem Code in Form und Modul. Bitte beachten Sie, in der Excel-datei wird kein Code gestartet, erst durch manuelles Aufrufen des Makros "Main". Es soll gezeigt werden wie VB-Code in VB-Classic als auch in VBA7-x64 lauffähig wird, durch bedingte Kompilierung und durch Einführung des Datentyp Enum LongPtr in VBC.
 
 Form/UserForm: MyForm
 Label: Label1, Label2

@@ -7,20 +7,20 @@
 [![Follow](https://img.shields.io/github/followers/OlimilO1402.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/OlimilO1402/XL_VBanywhere/watchers)
 
 Tutorial published on 04. aug. 2021. at ActiveVB.de/VBA-Forum.  
-The project shows how to make VB-Code runnable in VB-Classic as well as in 64-bit VBA7, by using conditional compilation and at the same time how to avoid unecessary lines of code caused by conditional compilation just by inventing the datatype Enum LongPtr in VBC.  
+The project shows how to make VB-Code runnable in VB-Classic as well as in 64-bit VBA7, by using conditional compilation and at the same time how to avoid unnecessary lines of code caused by conditional compilation just by inventing the datatype Enum LongPtr in VBC.  
 
 Tutorial in english  
 
 ## VB-Code running in VBC as well as in VBA7-x86 and -x64  
 ### VB Conditional Compilation   
 
-In the VBC-IDE in the project-properties dialog we have the tab "Compilation" (english help needed) under "Arguments for conditional compilation" we are able to define constants to control the behavior of the compiler to our own needs.  
-In the VBA-IDE you will find the menu item "Extras" and "Properties for VBA Project...".  
+In the VBC-IDE in the project-properties dialog we have the tab "General" (english help needed) under "Conditional Compilation Arguments" we are able to define constants to control the behavior of the compiler to our own needs.  
+In the VBA-IDE you will find the menu item "Extras" and "Properties for VBAProject..." tab "General" under "Conditional Compilation Arguments:".  
 To separate different constants, use a colon ":" e.g.:  
 
 Mode_Beta = 0 : Mode_Debug = 1 : VBC = 1   
 
-![XL_VBanywhere Image](ProjekteigArgFBedKomp.png "ProjekteigArgFBedKomp Image")  
+![XL_VBanywhere Image](Resources/ProjekteigArgFBedKomp.png "ProjekteigArgFBedKomp Image")  
 
 With the #If-statement-for-conditional-compilation we are able to check those constants for telling the compiler what to compile and what not to compile.  
 The Compiler will only use the true line, all other code will be left out and will not be touched e.g.:  
@@ -90,10 +90,10 @@ Public Enum LongPtr
 End Enum
 ```
 
-Every Enum-constant is a 32 bit integer resp VB.Long, that is of course sufficient for pointers.  
+Every Enum-constant is a 32 bit integer resp VB.Long, that is of course sufficient for pointers in x86.  
 By inventing the Enum-type LongPtr we get the advantage to define every API-function in VBC and VBA7-x64 to be the same, and differing only in the keyword PtrSafe.  
 Now we finally can get rid of so many conditional-compilation-lines of code like "#If VBA7 Then".  
-For structurs resp ud-types for the windows-API, we get the benefit to avoid conditional compilation completely, and delete unecessary double declared ud-types, saving a lot of lines of code.  
+For structurs/ud-types for the windows-API, we get the benefit to avoid conditional compilation completely, and delete unnecessary double declared ud-types, saving a lot of lines of code.  
 
 ### Further Reading ###  
 [docs.microsoft: Kompatibilität zwischen der 32-Bit- und der 64-Bit-Version von Office](https://docs.microsoft.com/de-de/office/client-developer/shared/compatibility-between-the-32-bit-and-64-bit-versions-of-office)  
