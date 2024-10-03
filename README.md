@@ -6,12 +6,13 @@
 [![Github All Releases](https://img.shields.io/github/downloads/OlimilO1402/XL_VBanywhere/total.svg)](https://github.com/OlimilO1402/XL_VBanywhere/releases/download/v2023.6.9/XLVBanywhere_v2023.6.9.zip)
 ![GitHub followers](https://img.shields.io/github/followers/OlimilO1402?style=social)
 
-Tutorial published on 04. aug. 2021. at ActiveVB.de/VBA-Forum.  
-The project shows how to make VB-Code runnable in VB-Classic as well as in 64-bit VBA7, by using conditional compilation and at the same time how to avoid unnecessary lines of code caused by conditional compilation just by inventing the datatype Enum LongPtr in VBC.  
+Tutorial published first at [ActiveVB.de/VBA-Forum on 04. aug. 2021](http://foren.activevb.de/forum/vba/thread-26799/beitrag-26799/VB-Code-lauffaehig-in-VBC-als-a/#forum).   
+The project shows how to make VB-Code runnable in VB6 aka VB-Classic as well as in VBA6 and VBA7 32-bit x86 and VBA7 64-bit win64, by using conditional compilation and at the same time how to avoid unnecessary lines of code caused by conditional compilation just by inventing the datatype Enum LongPtr in VBC/VBA6.  
 
-Tutorial in english  
+Tutorial in english, there is also a [german version](https://github.com/OlimilO1402/XL_VBanywhere/blob/main/README_de.md)  
+Also have a look aht the Microsoft Turorial touching this topic: [64 bit visual basic for applications overview](https://learn.microsoft.com/en-us/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview).  
 
-## VB-Code running in VBC as well as in VBA7-x86 and -x64  
+## VB-Code running in VBC as well as in VBA6 and VBA7-x86 and -x64  
 ### VB Conditional Compilation   
 
 In the VBC-IDE in the project-properties dialog we have the tab "General" (english help needed) under "Conditional Compilation Arguments" we are able to define constants to control the behavior of the compiler to our own needs.  
