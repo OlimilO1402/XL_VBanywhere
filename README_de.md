@@ -68,7 +68,9 @@ Jede API-Funktion braucht im Vergleich zu VBC/VBA6 das zusätzliche Schlüsselwo
 
 In x86/Win32 sind alle Zeiger 32 Bit breit. Da es in VBC keinen eigenen speziellen Datentyp für Zeiger gibt, hat sich der Datentyp Long eingebürgert. Der Datentyp Long ist außerdem der Datentyp der von den Funktionen StrPtr, ObjPtr und VarPtr in VBC zurückgegeben wird.
 Weil unter x64 alle Zeiger 64 bit breit sind wurde in VBA7 der Datentyp "**LongPtr**" eingeführt.  
-
+  
+Der Datentyp LongPtr hat die besondere Eigenschaft, dass er in X86 32 bit breit ist und in x64 ist er 64 bit breit.  
+  
 *Merke:*
 Der Datentyp LongPtr muss bei allen Handles wie hWnd oder hDC als auch bei Zeiger wie z.B. bei den Unicode-API-Funktionen (W-Funktionen) für z.B. String verwendet werden. Der Datentyp LongPtr ist außerdem der Datentyp der von den Funktionen StrPtr, ObjPtr und VarPtr in VBA7 zurückgegeben wird.  
 
@@ -81,7 +83,7 @@ Public Enum LongPtr
 End Enum
 ```
 
-Jede Enum-Konstante ist ein 32-Bit breiter Integer bzw ein VB.Long, für Zeiger also ausreichend.
+Jede Enum-Konstante ist ein 32-Bit breiter Integer bzw ein VB.Long, für Zeiger invBC also ausreichend da VBC nur unter 32-bit läuft.
 Die Einführung des Enum-Typen LongPtr hat den Vorteil dass sich API-Funtkionen zwischen VBC und VBA7-64 nur noch durch das Schlüsselwort PtrSafe unterscheiden, und ansonsten genau gleich lauten.
 Für Strukturen bzw ud-Types die für die Windows-API verwendet werden müssen, hat dies sogar den Vorteil dass sie nicht durch bedingte Kompilierung doppelt angelegt werden müssen, man spart also jede Menge Platz, Zeilen und Schreibarbeit.
 
